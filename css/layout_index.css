@@ -234,9 +234,18 @@ section#secContact {
     text-align: right;
 }
 
-.about_table.left th {
-    padding-left: 2rem;
-    text-align: left;
+.about_table.left tr {
+    border-bottom: .05rem dashed rgba(255, 255, 255, .1);
+}
+
+.about_table.left tr > td {
+    padding: .5rem 0;
+}
+
+.about_table.left tr > td:nth-child(2) {
+    padding: 0 2rem;
+    width: 3rem;
+    text-align: center;
 }
 
 /* ---------- secAbout 종료 ---------- */
