@@ -19,10 +19,6 @@
 }
 
 @keyframes pulse {
-    0% {
-
-    }
-
     10% {
         transform: scale(1.1);
     }
@@ -53,10 +49,6 @@
 }
 
 @keyframes popcard {
-    0% {
-
-    }
-
     75% {
         transform: perspective(25rem) rotateX(5deg);
     }
@@ -77,10 +69,6 @@
 }
 
 @keyframes scrolldown {
-    from {
-
-    }
-
     to {
         transform: translateY(.75rem);
         opacity: 0;
