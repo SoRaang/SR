@@ -1,0 +1,168 @@
+/* ---------- CWK Individual Layout CSS (Index) ---------- */
+
+/* ---------- 영역 공통 선언 시작 ---------- */
+
+body {
+    background-color: #2d2d2d;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, .1) .1rem, transparent .1rem),
+        linear-gradient(90deg, rgba(255, 255, 255, .1) .1rem, transparent .1rem),
+        linear-gradient(rgba(255, 255, 255, .05) .05rem, transparent .05rem),
+        linear-gradient(90deg, rgba(255, 255, 255, .05) .05rem, transparent .05rem);
+    background-size: 
+        5rem 5rem,
+        5rem 5rem,
+        1rem 1rem,
+        1rem 1rem;
+    background-position:
+        -.1rem -.1rem,
+        -.1rem -.1rem,
+        -.05rem -.05rem,
+        -.05rem -.05rem;
+    color: rgba(255, 255, 255, .75);
+    text-shadow: .05rem .05rem .1rem rgba(0, 0, 0, .75);
+}
+
+body::before {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: radial-gradient(circle at top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .75) 100%);
+    content: '';
+}
+
+#wrap {
+    height: 100vh;
+}
+
+/* ---------- 영역 공통 선언 종료 ---------- */
+/* ---------- 헤더 영역 시작 ---------- */
+
+header#headBase {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    font-size: .6rem;
+    z-index: 500000;
+}
+
+nav#navBase {
+    display: flex;
+    width: fit-content;
+    border: .05rem solid rgba(255, 255, 255, .3);
+    background: rgba(0, 0, 0, .3);
+    backdrop-filter: blur(.5rem) saturate(.9);
+    box-shadow: 0 .75rem .75rem -.5rem rgba(0, 0, 0, .25);
+}
+
+nav#navBase > a {
+    display: block;
+    padding: 1rem;
+}
+
+nav#navBase > a:hover {
+    background: rgba(0, 0, 0, .75);
+    box-shadow: 0 0 1rem rgba(255, 210, 21, .5);
+}
+
+nav#navBase > a:target {
+    background: #ccc;
+}
+
+nav#navBase > a > * {
+    display: block;
+    margin: auto 0;
+}
+
+nav#navBase > hr.vf {
+    height: 2.6rem;
+    background: rgba(255, 255, 255, .3);
+}
+
+/* ---------- 헤더 영역 종료 ---------- */
+/* ---------- 섹션 공통 선언 시작 ---------- */
+
+div#contentBase {
+
+}
+
+video.vid_bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+    filter: blur(1rem);
+    opacity: .75;
+    z-index: -1;
+}
+
+section {
+    position: relative;
+    padding: 2rem;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+h2 {
+    position: relative;
+    width: fit-content;
+}
+
+h2::before {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    animation: blink .8s infinite;
+    transition: .3s;
+    content: '_';
+}
+
+/* ---------- 섹션 공통 선언 종료 ---------- */
+/* ---------- secHero 시작 ---------- */
+
+section#secHero {
+    display: grid;
+    align-items: center;
+}
+
+.herotitle {
+    margin: auto;
+    width: fit-content;
+    animation: pulse .5s infinite;
+}
+
+/* ---------- secHero 시작 ---------- */
+/* ---------- secAbout 시작 ---------- */
+
+section#secAbout {
+
+}
+
+/* ---------- secAbout 종료 ---------- */
+/* ---------- secPortfolio 시작 ---------- */
+
+section#secPortfolio {
+
+}
+
+/* ---------- secPortfolio 종료 ---------- */
+/* ---------- secContact 시작 ---------- */
+
+section#secContact {
+
+}
+
+/* ---------- secContact 종료 ---------- */
+/* ---------- 푸터 영역 시작 ---------- */
+
+footer#footBase {
+    padding: 1rem 0;
+    font-size: .6rem;
+    text-align: center;
+}

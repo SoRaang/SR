@@ -51,3 +51,38 @@
 
     }
 }
+
+@keyframes popcard {
+    0% {
+
+    }
+
+    75% {
+        transform: perspective(25rem) rotateX(5deg);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes wave {
+    from {
+        box-shadow: 0 0 .1rem 0 rgba(255, 255, 255, .25);
+    }
+
+    to {
+        box-shadow: 0 0 1rem .5rem rgba(255, 255, 255, 0);
+    }
+}
+
+@keyframes scrolldown {
+    from {
+
+    }
+
+    to {
+        transform: translateY(.75rem);
+        opacity: 0;
+    }
+}

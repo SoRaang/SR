@@ -1,6 +1,14 @@
 // ---------- CWK Individual jQuary ----------
 
 $(document).ready(function() { // jQuery Load
+    $(window).scroll(function() {
+        if ($(this).scrollTop() >= 250) {
+            $('.hurry_scroll').fadeOut();
+        } else {
+            $('.hurry_scroll').fadeIn();
+        }
+    });
+
     $('.btnall').click(function() {
         $(this).addClass('on').siblings('button').removeClass('on');
         $('.port_win').show();
