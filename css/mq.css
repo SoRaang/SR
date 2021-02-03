@@ -1,0 +1,13 @@
+/* ---------- CWK Media Query CSS ---------- */
+
+@media screen and (max-width: 960px) {
+    .port_win {
+        width: calc(50% - .5rem);
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .port_win {
+        width: 100%;
+    }
+}

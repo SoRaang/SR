@@ -1,0 +1,352 @@
+/* ---------- CWK Individual Layout CSS (Index) ---------- */
+
+/* ---------- 영역 공통 선언 시작 ---------- */
+
+body {
+    background-color: #2e2f3b;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, .1) .1rem, transparent .1rem),
+        linear-gradient(90deg, rgba(255, 255, 255, .1) .1rem, transparent .1rem),
+        linear-gradient(rgba(255, 255, 255, .05) .05rem, transparent .05rem),
+        linear-gradient(90deg, rgba(255, 255, 255, .05) .05rem, transparent .05rem);
+    background-size: 5rem 5rem, 5rem 5rem, 1rem 1rem, 1rem 1rem;
+    background-position: -.1rem -.1rem, -.1rem -.1rem, -.05rem -.05rem, -.05rem -.05rem;
+    color: rgba(255, 255, 255, .75);
+    text-shadow: .05rem .05rem .1rem rgba(0, 0, 0, .75);
+}
+
+body::before {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: radial-gradient(circle at top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .75) 100%);
+    content: '';
+}
+
+#wrap {
+    overflow: hidden;
+}
+
+/* ---------- 영역 공통 선언 종료 ---------- */
+/* ---------- 헤더 영역 시작 ---------- */
+
+header#headBase {
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    gap: .5rem;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 500000;
+}
+
+h1#logo {
+    margin: auto 0;
+    width: 4rem;
+    height: 2rem;
+    filter: drop-shadow(0 .25rem .5rem rgba(0, 0, 0, .2));
+}
+
+nav#navBase {
+    display: flex;
+    border: .05rem solid rgba(255, 255, 255, .3);
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(.25rem) brightness(.75) saturate(.75);
+    box-shadow: 0 .5rem .5rem -.25rem rgba(0, 0, 0, .2);
+    font-size: 1vh;
+    transition: .3s;
+}
+
+nav#navBase > a {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: .35rem;
+    margin: auto 0;
+    padding: 1rem;
+    transition: .3s;
+}
+
+nav#navBase > a:hover {
+    background: rgba(0, 0, 0, .75);
+    box-shadow: 0 0 1rem rgba(255, 210, 21, .75);
+}
+
+nav#navBase > a > * {
+    margin: auto 0;
+}
+
+nav#navBase > a.on {
+    background: rgba(0, 0, 0, .75);
+    box-shadow: 0 0 1rem rgba(255, 210, 21, .75);
+}
+
+.icon_about,
+.icon_portfolio,
+.icon_contact {
+    display: inline-block;
+    width: .6rem;
+    height: .6rem;
+    background-size: contain;
+    vertical-align: bottom;
+}
+
+.icon_about {
+    background: url('../images/icons/icon_about.png') no-repeat center;
+}
+
+.icon_portfolio {
+    background: url('../images/icons/icon_portfolio.png') no-repeat center;
+}
+
+.icon_contact {
+    background: url('../images/icons/icon_contact.png') no-repeat center;
+}
+
+nav#navBase > hr.vf {
+    background: rgba(255, 255, 255, .3);
+}
+
+/* ---------- 헤더 영역 종료 ---------- */
+/* ---------- 섹션 공통 선언 시작 ---------- */
+
+
+section {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: flex-start;
+    gap: 3rem;
+}
+
+h2 {
+    position: relative;
+    margin: 5rem auto 0 auto;
+    width: fit-content;
+    font-size: 4vh;
+}
+
+h2::before {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    animation: blink .8s infinite;
+    transition: .3s;
+    content: '_';
+}
+
+section#secHero,
+section#secContact {
+    height: 100vh;
+}
+
+/* ---------- 섹션 공통 선언 종료 ---------- */
+/* ---------- secHero 시작 ---------- */
+
+.hero_title {
+    animation: pulse .5s infinite;
+}
+
+/* ---------- secHero 종료 ---------- */
+/* ---------- secAbout 시작 ---------- */
+
+.about_win {
+    display: flex;
+    flex-flow: row wrap;
+    gap: .75rem;
+    padding: 1.5rem;
+    max-width: 100%;
+    border: .05rem solid rgba(255, 255, 255, .3);
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(.25rem) brightness(.75) saturate(.75);
+    box-shadow: 0 .5rem .5rem -.25rem rgba(0, 0, 0, .2);
+    font-size: 1vh;
+    transition: .3s;
+    font-size: 1.5vh;
+    line-height: 1.8;
+}
+
+.about_win:nth-child(even) {
+    margin-right: auto;
+}
+
+.about_win:nth-child(odd) {
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+.about_win > h4 {
+    width: 100%;
+}
+
+.about_img {
+    width: 100%;
+}
+
+.about_table td {
+    width: max-content;
+}
+
+.about_table th {
+    padding-right: 1rem;
+    width: max-content;
+    text-align: right;
+}
+
+.about_table.left th {
+    padding-left: 2rem;
+    text-align: left;
+}
+
+/* ---------- secAbout 종료 ---------- */
+/* ---------- secPortfolio 시작 ---------- */
+
+.port_tab {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+}
+
+.port_win {
+    width: calc((100% - 2rem) / 3);
+    border: .05rem solid rgba(255, 255, 255, .3);
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(.25rem) brightness(.75) saturate(.75);
+    box-shadow: 0 .5rem .5rem -.25rem rgba(0, 0, 0, .2);
+    font-size: 1.5vh;
+    line-height: 1.8;
+    transition: .3s;
+}
+
+.port_win > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.port_win > a > img {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    border-bottom: .05rem solid rgba(255, 255, 255, .3);
+    object-position: center top;
+    object-fit: cover;
+}
+
+.port_win > a > p {
+    padding: 1rem;
+}
+
+.port_sel {
+    display: flex;
+    justify-content: center;
+    gap: .25rem;
+}
+
+.port_sel > * {
+    display: block;
+    margin: auto 0;
+    padding: .25rem .5rem;
+    border-radius: .1rem;
+    background: #ccc;
+    font-size: .6rem;
+}
+
+.port_sel > *.on {
+    padding: .35rem .75rem;
+    background: #ff0;
+    font-weight: bolder;
+}
+
+/* ---------- secPortfolio 종료 ---------- */
+/* ---------- secContact 시작 ---------- */
+
+.contact_win {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+    gap: 3rem;
+    margin-bottom: 5rem;
+}
+
+.contact_mail {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: fit-content;
+    font-size: 10vw;
+}
+
+.contact_mail::before,
+.contact_mail::after {
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    transition: .5s;
+    content: '';
+}
+
+.contact_mail::before {
+    top: -7.5%;
+    left: -2.5%;
+    border-top: .15rem solid transparent;
+    border-left: .15rem solid transparent;
+}
+
+.contact_mail::after {
+    bottom: -7.5%;
+    right: -2.5%;
+    border-bottom: .15rem solid transparent;
+    border-right: .15rem solid transparent;
+}
+
+.contact_mail:hover::before,
+.contact_mail:hover::after {
+    width: 10%;
+    height: 15%;
+}
+
+.contact_mail:hover::before,
+.contact_mail:hover::after {
+    border-color: #fff;
+}
+
+.contact_sns {
+    display: flex;
+    gap: 1rem;
+    margin-left: auto;
+    font-size: .6rem;
+}
+
+.contact_sns > li a {
+    display: flex;
+    gap: .25rem;
+}
+
+.contact_sns > li img {
+    width: .6rem;
+    height: .6rem;
+}
+
+/* ---------- secContact 종료 ---------- */
+/* ---------- 푸터 영역 시작 ---------- */
+
+footer#footBase {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, 0) 100%);
+    font-size: .6rem;
+    text-align: center;
+}

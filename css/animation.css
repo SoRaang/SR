@@ -1,0 +1,53 @@
+/* ---------- CWK Animation Keyframes CSS ---------- */
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    45% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    95% {
+        opacity: 0;
+    }
+}
+
+@keyframes pulse {
+    0% {
+
+    }
+
+    10% {
+        transform: scale(1.1);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    40% {
+        transform: scale(1.05);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+    70% {
+        transform: scale(1.025);
+    }
+
+    90% {
+        transform: scale(1);
+    }
+
+    100% {
+
+    }
+}

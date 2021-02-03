@@ -1,0 +1,220 @@
+/* ---------- CWK Default CSS ---------- */
+
+@font-face {
+    font-family: 'IBM Plex Sans KR ExtraLight';
+    src: url('./fonts/krLight.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans KR Regular';
+    src: url('./fonts/krRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans KR Medium';
+    src: url('./fonts/krBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans KR Bold';
+    src: url('./fonts/krExtraBold.ttf') format('truetype');
+    font-weight: bolder;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Miriam Libre Regular';
+    src: url('./fonts/enLight.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Miriam Libre Bold';
+    src: url('./fonts/enBold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.txtlight {
+    font-family: 'IBM Plex Sans KR ExtraLight', sans-serif;
+}
+
+.txtnorm {
+    font-family: 'IBM Plex Sans KR Regular', sans-serif;
+}
+
+.txtbold {
+    font-family: 'IBM Plex Sans KR Medium', sans-serif;
+}
+
+.txtblack {
+    font-family: 'IBM Plex Sans KR Bold', sans-serif;
+}
+
+.txtenlight {
+    font-family: 'Miriam Libre Regular', sans-serif;
+}
+
+.txtenbold {
+    font-family: 'Miriam Libre Bold', sans-serif;
+}
+
+/* ---------- font-face ---------- */
+/* ---------- 기본 형태 선언 시작 ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-family: 'IBM Plex Sans KR Regular', sans-serif;
+    font-size: 20px; /* Size-Adjustment Base : 20px */
+    color: inherit;
+    line-height: 1; /* Base-Line Height : Follow Base-Font Size */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1rem; /* Base-Font Size : 20px */
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+img {
+    display: block;
+    border: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link,
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    color: rgba(255, 210, 21, 1);
+}
+
+form,
+fieldset {
+    border: none;
+}
+
+input,
+textarea,
+select,
+button {
+    border: none;
+    background: none;
+    vertical-align: middle;
+}
+
+hr {
+    clear: both;
+    border: none;
+    background: rgba(0, 0, 0, 1);
+}
+
+hr.hf {
+    width: 100%;
+    height: .05rem;
+}
+
+hr.vf {
+    width: .05rem;
+    height: 100%;
+}
+
+address {
+    font-style: normal;
+}
+
+.scr_alt {
+    text-indent: -500000rem;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    width: .8rem;
+    background: transparent;
+}
+
+::-webkit-scrollbar-track {
+    width: .8rem;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    padding: .2rem;
+    border: .2rem solid transparent;
+    border-radius: .4rem;
+    background: linear-gradient(0deg, rgba(25, 214, 120, 1) 0%, rgba(255, 210, 21, 1) 100%);
+    background-clip: padding-box;
+}
+
+/* ---------- 기본 형태 선언 종료 ---------- */
+/* ---------- 공통 선언 시작 ---------- */
+
+body {
+    background: rgb(255, 255, 255);
+    color: rgba(0, 0, 0, .9);
+    transition: .5s;
+}
+
+::selection {
+    background: rgba(255, 210, 21, 1);
+    color: rgba(0, 0, 0, .9);
+}
+
+#wrap { /* 전체 랩핑 */
+    position: relative;
+    width: 100%;
+}
+
+.int_wrap { /* 내부 박스 사이징 */
+    margin: 0 auto;
+    padding: 0 .5rem;
+    min-width: 16rem;
+    max-width: 60rem;
+    box-sizing: border-box;
+}
+
+h1.logo {
+    margin: 0;
+    padding: 0;
+}
+
+h1.logo > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* ---------- 공통 선언 종료 ---------- */
+/* ---------- 우선/예외 선언 시작 ---------- */
+
+
+
+/* ---------- 우선/예외 선언 종료 ---------- */
