@@ -190,9 +190,10 @@ section#secContact {
 
 .about_win {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
     gap: .75rem;
     padding: 1.5rem;
+    width: fit-content;
     max-width: 100%;
     border: .05rem solid rgba(255, 255, 255, .3);
     box-sizing: border-box;
@@ -214,13 +215,29 @@ section#secContact {
     margin-left: auto;
 }
 
+.about_win:last-child {
+    width: calc(100% * 2 / 3);
+}
+
 .about_win > h4 {
     padding-bottom: .25rem;
     width: 100%;
     border-bottom: .05rem solid rgba(255, 210, 21, .75);
 }
 
+.about_win:nth-child(even) > h4 {
+    text-align: right;
+}
+
 .about_img {
+    width: 100%;
+}
+
+.about_win > p {
+    text-indent: .25rem;
+}
+
+.about_table {
     width: 100%;
 }
 
@@ -307,6 +324,7 @@ section#secContact {
     display: block;
     margin: auto 0;
     padding: .25rem .5rem;
+    width: fit-content;
     border-radius: .1rem;
     background: #ccc;
     font-size: .6rem;

@@ -10,4 +10,8 @@
     .port_win {
         width: 100%;
     }
+
+    .about_win:last-child {
+        width: 100%;
+    }
 }
