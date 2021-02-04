@@ -9,6 +9,12 @@ $(document).ready(function() { // jQuery Load
         }
     });
 
+    $('.portrait_container').hover(function() {
+        $(this).find('img').attr('src', './images/portrait_color.png');
+    }, function() {
+        $(this).find('img').attr('src', './images/portrait.png');
+    })
+
     $('.btnall').click(function() {
         $(this).addClass('on').siblings('button').removeClass('on');
         $('.port_win').show();

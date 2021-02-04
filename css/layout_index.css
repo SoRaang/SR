@@ -200,10 +200,9 @@ section#secContact {
     background: rgba(0, 0, 0, .1);
     backdrop-filter: blur(.25rem) brightness(.75) saturate(.75);
     box-shadow: 0 .5rem .5rem -.25rem rgba(0, 0, 0, .2);
-    font-size: 1vh;
-    transition: .3s;
     font-size: 1.5vh;
     line-height: 1.8;
+    transition: .3s;
 }
 
 .about_win:nth-child(even) {
@@ -229,8 +228,31 @@ section#secContact {
     text-align: right;
 }
 
+.portrait_container {
+    width: 40%;
+}
+
+.portrait_container:hover {
+    background: #fff;
+}
+
 .about_img {
     width: 100%;
+    transition: .3s;
+}
+
+.portrait_container::before {
+    display: block;
+    position: absolute;
+    bottom: .25rem;
+    left: 100%;
+    padding: .4rem .75rem;
+    width: fit-content;
+    background: rgba(255, 255, 255, .75);
+    font-size: .6rem;
+    color: #000;
+    z-index: 2;
+    content: 'Portrait of me, looking at you'
 }
 
 .about_win > p {
