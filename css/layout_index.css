@@ -36,20 +36,21 @@ body::before {
 
 header#headBase {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-content: center;
-    gap: .5rem;
     position: fixed;
     top: 1rem;
+    left: 1rem;
     right: 1rem;
     z-index: 500000;
 }
 
 h1#logo {
     margin: auto 0;
-    width: 4rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 1.25rem;
     filter: drop-shadow(0 .25rem .5rem rgba(0, 0, 0, .2));
+    animation: rgbgaming 1s linear infinite;
 }
 
 nav#navBase {
@@ -247,7 +248,7 @@ section#secContact {
     bottom: .25rem;
     left: 100%;
     padding: .4rem .75rem;
-    width: fit-content;
+    width: max-content;
     background: rgba(255, 255, 255, .75);
     font-size: .6rem;
     color: #000;
@@ -306,11 +307,19 @@ section#secContact {
     font-size: 1.5vh;
     line-height: 1.8;
     transform-origin: 50% 25%;
+    transition: .3s;
 }
 
 .port_win:hover {
     animation: popcard .3s 1 forwards;
     z-index: 2;
+}
+
+.port_win.off {
+    width: 0;
+    height: 0;
+    border: 0;
+    overflow: hidden;
 }
 
 .port_win > a {
@@ -325,7 +334,8 @@ section#secContact {
     border-bottom: .05rem solid rgba(255, 255, 255, .3);
     object-position: center top;
     object-fit: cover;
-    filter: grayscale(.75);
+    filter: grayscale(.75) brightness(.6);
+    transition: .3s;
 }
 
 .port_win > a:hover > img {

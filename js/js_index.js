@@ -13,35 +13,35 @@ $(document).ready(function() { // jQuery Load
         $(this).find('img').attr('src', './images/portrait_color.png');
     }, function() {
         $(this).find('img').attr('src', './images/portrait.png');
-    })
+    });
 
     $('.btnall').click(function() {
         $(this).addClass('on').siblings('button').removeClass('on');
-        $('.port_win').show();
+        $('.port_win').show().removeClass('off');
     });
 
     $('.btnweb').click(function() {
         $(this).addClass('on').siblings('button').removeClass('on');
-        $('.port_win').show();
-        $('.port_win:not([data-category="web"])').hide();
+        $('.port_win').show().removeClass('off');
+        $('.port_win:not([data-category="web"])').addClass('off').hide();
     });
 
     $('.btnim').click(function() {
         $(this).addClass('on').siblings('button').removeClass('on');
-        $('.port_win').show();
-        $('.port_win:not([data-category="manipulation"])').hide();
+        $('.port_win').show().removeClass('off');
+        $('.port_win:not([data-category="manipulation"])').addClass('off').hide();
     });
 
     $('.btnis').click(function() {
         $(this).addClass('on').siblings('button').removeClass('on');
-        $('.port_win').show();
-        $('.port_win:not([data-category="iconset"])').hide();
+        $('.port_win').show().removeClass('off');
+        $('.port_win:not([data-category="iconset"])').addClass('off').hide();
     });
 
     $('.btnetc').click(function() {
         $(this).addClass('on').siblings('button').removeClass('on');
-        $('.port_win').show();
-        $('.port_win:not([data-category="etc"])').hide();
+        $('.port_win').show().removeClass('off');
+        $('.port_win:not([data-category="etc"])').addClass('off').hide();
     });
 }) // jQuery Closed
 
