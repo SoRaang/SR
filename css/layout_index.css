@@ -291,6 +291,28 @@ section#secContact {
 /* ---------- secAbout 종료 ---------- */
 /* ---------- secPortfolio 시작 ---------- */
 
+.port_sel {
+    display: flex;
+    justify-content: center;
+    gap: .25rem;
+}
+
+.port_sel > * {
+    display: block;
+    margin: auto 0;
+    padding: .25rem .5rem;
+    width: fit-content;
+    border-radius: .1rem;
+    background: #ccc;
+    font-size: .6rem;
+}
+
+.port_sel > *.on {
+    padding: .35rem .75rem;
+    background: #ff0;
+    font-weight: bolder;
+}
+
 .port_tab {
     display: flex;
     flex-flow: row wrap;
@@ -346,26 +368,59 @@ section#secContact {
     padding: 1rem;
 }
 
-.port_sel {
+.port_tool,
+.port_description {
+    display: none;
+}
+
+article#portDesc {
+    display: none;
+    position: fixed;
+    top: 4.5rem;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    padding: 2rem 1rem;
+    border: .05rem solid rgba(255, 255, 255, .3);
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, .5);
+    backdrop-filter: blur(.5rem);
+    box-shadow: 0 .5rem .5rem -.25rem rgba(0, 0, 0, .2);
+    outline: 500000vh solid rgba(0, 0, 0, .9);
+    overflow-y: auto;
+    z-index: 100000;
+}
+
+article#portDesc > * {
+    text-align: center;
+}
+
+.port_desc_close {
+    position: sticky;
+    top: 0;
+    left: 0;
+    color: #fff;
+}
+
+.port_desc_img {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    border-radius: 1.5vw;
+}
+
+.port_dl {
     display: flex;
-    justify-content: center;
-    gap: .25rem;
+    flex-flow: column;
+    gap: 1.5rem;
 }
 
-.port_sel > * {
-    display: block;
-    margin: auto 0;
-    padding: .25rem .5rem;
-    width: fit-content;
-    border-radius: .1rem;
-    background: #ccc;
-    font-size: .6rem;
+.port_dl > dt {
+    
 }
 
-.port_sel > *.on {
-    padding: .35rem .75rem;
-    background: #ff0;
-    font-weight: bolder;
+.port_dl > dd {
+    font-size: .7rem;
 }
 
 /* ---------- secPortfolio 종료 ---------- */
