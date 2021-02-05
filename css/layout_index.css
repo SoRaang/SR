@@ -328,13 +328,41 @@ section#secContact {
     box-shadow: 0 .5rem .5rem -.25rem rgba(0, 0, 0, .2);
     font-size: 1.5vh;
     line-height: 1.8;
-    transform-origin: 50% 25%;
     transition: .3s;
+    z-index: 1;
+    cursor: help;
+}
+
+.port_win::before,
+.port_win::after {
+    position: absolute;
+    bottom: 100%;
+    left: 1%;
+    width: 98%;
+    height: 0;
+    background: rgba(255, 255, 255, .05);
+    transform-origin: 50% 100%;
+    transition: .25s;
+    opacity: 0;
+    z-index: -1;
+    content: '';
 }
 
 .port_win:hover {
     animation: popcard .3s 1 forwards;
     z-index: 2;
+}
+
+.port_win:hover::before {
+    height: 1rem;
+    transform: perspective(25rem) rotateX(30deg);
+    opacity: 1;
+}
+
+.port_win:hover::after {
+    height: .5rem;
+    transform: perspective(25rem) rotateX(15deg);
+    opacity: 1;
 }
 
 .port_win.off {
@@ -344,13 +372,7 @@ section#secContact {
     overflow: hidden;
 }
 
-.port_win > a {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-.port_win > a > img {
+.port_win > img {
     aspect-ratio: 16 / 9;
     width: 100%;
     border-bottom: .05rem solid rgba(255, 255, 255, .3);
@@ -360,11 +382,11 @@ section#secContact {
     transition: .3s;
 }
 
-.port_win > a:hover > img {
+.port_win:hover > img {
     filter: none;
 }
 
-.port_win > a > p {
+.port_win > p {
     padding: 1rem;
 }
 
@@ -387,7 +409,6 @@ article#portDesc {
     backdrop-filter: blur(.5rem);
     box-shadow: 0 .5rem .5rem -.25rem rgba(0, 0, 0, .2);
     outline: 500000vh solid rgba(0, 0, 0, .9);
-    overflow-y: auto;
     z-index: 100000;
 }
 
@@ -396,10 +417,33 @@ article#portDesc > * {
 }
 
 .port_desc_close {
-    position: sticky;
-    top: 0;
-    left: 0;
-    color: #fff;
+    position: fixed;
+    top: .35rem;
+    left: .35rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    border: .05rem solid rgba(255, 255, 255, .3);
+    background: rgba(0, 0, 0, .5);
+}
+
+.port_desc_close::before,
+.port_desc_close::after {
+    display: block;
+    position: absolute;
+    top: calc(50% - .025rem);
+    left: 15%;
+    width: 70%;
+    height: .05rem;
+    background: rgba(255, 255, 255, .75);
+    content: '';
+}
+
+.port_desc_close::before {
+    transform: rotate(45deg);
+}
+
+.port_desc_close::after {
+    transform: rotate(-45deg);
 }
 
 .port_desc_img {
@@ -413,14 +457,16 @@ article#portDesc > * {
     display: flex;
     flex-flow: column;
     gap: 1.5rem;
-}
-
-.port_dl > dt {
-    
+    height: 100%;
+    overflow-y: auto;
 }
 
 .port_dl > dd {
     font-size: .7rem;
+}
+
+.port_desc_spec {
+    line-height: 1.6;
 }
 
 /* ---------- secPortfolio 종료 ---------- */

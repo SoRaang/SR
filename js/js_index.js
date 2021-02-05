@@ -31,12 +31,13 @@ $(document).ready(function() { // jQuery Load
         }
     });
 
-    $('.port_win > a').each(function() {
+    $('.port_win').each(function() {
         $(this).click(function() {
             $('article#portDesc').fadeIn();
             $('.port_dl > dt').text($(this).find('span.txtbold').text());
             $('.port_dl > dd.port_desc_tool').text($(this).find('span.port_tool').text());
             $('.port_dl img').attr('src', $(this).find('img').attr('src'));
+            $('.port_dl .port_desc_spec').html($(this).find('p.port_description').html());
         });
     });
 
