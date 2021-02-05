@@ -4,10 +4,12 @@ $(document).ready(function() { // jQuery Load
     $(window).scroll(function() {
         if ($(this).scrollTop() >= 250) {
             $('.hurry_scroll').fadeOut();
+            $('h1#logo').addClass('rgbgaming');
         }
 
         else {
             $('.hurry_scroll').fadeIn();
+            $('h1#logo').removeClass('rgbgaming');
         }
     });
 

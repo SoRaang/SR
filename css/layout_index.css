@@ -50,6 +50,9 @@ h1#logo {
     width: 2.5rem;
     height: 1.25rem;
     filter: drop-shadow(0 .25rem .5rem rgba(0, 0, 0, .2));
+}
+
+h1#logo.rgbgaming {
     animation: rgbgaming 1s linear infinite;
 }
 
@@ -211,7 +214,6 @@ section#secContact {
 }
 
 .about_win:nth-child(odd) {
-    justify-content: flex-end;
     margin-left: auto;
 }
 
@@ -369,7 +371,6 @@ section#secContact {
     width: 0;
     height: 0;
     border: 0;
-    overflow: hidden;
 }
 
 .port_win > img {
