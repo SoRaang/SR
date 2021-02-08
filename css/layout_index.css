@@ -46,14 +46,26 @@ header#headBase {
 }
 
 h1#logo {
+    position: relative;
     margin: auto 0;
     width: 2.5rem;
-    height: 1.25rem;
+    height: 2.5rem;
     filter: drop-shadow(0 .25rem .5rem rgba(0, 0, 0, .2));
+    animation: fizzle 2s infinite;
 }
 
-h1#logo.rgbgaming {
-    animation: rgbgaming 1s linear infinite;
+h1#logo:hover::before {
+    display: block;
+    position: absolute;
+    top: calc(50% - .6rem);
+    left: 100%;
+    padding: .3rem .5rem;
+    width: max-content;
+    border-radius: .15rem;
+    background: rgba(0, 0, 0, .5);
+    font-size: .6rem;
+    font-weight: normal;
+    content: 'logo.gotoTop';
 }
 
 nav#navBase {
@@ -452,6 +464,7 @@ article#portDesc > * {
     width: 100%;
     height: auto;
     border-radius: 1.5vw;
+    object-fit: cover;
 }
 
 .port_dl {
@@ -467,7 +480,24 @@ article#portDesc > * {
 }
 
 .port_desc_spec {
-    line-height: 1.6;
+    text-align: left;
+    line-height: 1.8;
+}
+
+a.btnPort {
+    display: block;
+    margin-top: 1.5rem;
+    padding: .5rem .75rem;
+    border-radius: .15rem;
+    background: rgba(255, 210, 21, 1);
+    color: rgba(0, 0, 0, .75);
+    transition: .5s;
+}
+
+a.btnPort:hover {
+    background: rgba(25, 214, 120, 1);
+    color: #fff;
+    font-weight: bolder;
 }
 
 /* ---------- secPortfolio 종료 ---------- */
