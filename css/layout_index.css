@@ -475,6 +475,12 @@ article#portDesc > * {
     height: 2.4rem;
     border: .05rem solid rgba(255, 255, 255, .3);
     background: rgba(0, 0, 0, .5);
+    transition: .3s;
+}
+
+.port_desc_close:hover {
+    background: rgba(0, 0, 0, .75);
+    box-shadow: 0 0 1rem rgba(255, 210, 21, .75);
 }
 
 .port_desc_close::before,
@@ -507,14 +513,23 @@ article#portDesc > * {
 
 .port_dl {
     display: flex;
-    flex-flow: column;
+    flex-flow: row wrap;
     gap: 1.5rem;
     height: 100%;
     overflow-y: auto;
 }
 
+.port_dl > dt {
+    width: 100%;
+}
+
 .port_dl > dd {
+    width: calc((100% - 1.5rem) / 2);
     font-size: .7rem;
+}
+
+dd.port_desc_tool {
+    width: 100%;
 }
 
 .port_desc_spec {

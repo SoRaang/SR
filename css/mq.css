@@ -4,14 +4,31 @@
     .port_win {
         width: calc(50% - .5rem);
     }
-}
 
-@media screen and (max-width: 640px) {
-    .port_win {
+    .port_dl {
+        flex-flow: column;
+    }
+
+    .port_dl > dd {
         width: 100%;
     }
 
+    dd.port_desc_tool {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    h1#logo:hover::before {
+        top: 105%;
+        left: -.35rem;
+    }
+
     .about_win:last-child {
+        width: 100%;
+    }
+
+    .port_win {
         width: 100%;
     }
 }
