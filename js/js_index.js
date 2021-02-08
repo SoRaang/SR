@@ -1,6 +1,8 @@
 // ---------- CWK Individual jQuary ----------
 
 $(document).ready(function() { // jQuery Load
+    $('aside#popNotice').slideDown().delay(7000).fadeOut(1000);
+
     $(window).scroll(function() {
         if ($(this).scrollTop() >= 250) {
             $('.hurry_scroll').fadeOut();
@@ -37,7 +39,7 @@ $(document).ready(function() { // jQuery Load
             $('.port_dl > dt').text($(this).find('span.txtbold').text());
             $('.port_dl > dd.port_desc_tool').text($(this).find('span.port_tool').text());
             $('.port_dl img').attr('src', $(this).find('img').attr('src'));
-            $('.port_dl .port_desc_spec').html($(this).find('p.port_description').html());
+            $('.port_dl .port_desc_spec').html($(this).find('div.port_description').html());
         });
     });
 

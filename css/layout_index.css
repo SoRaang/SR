@@ -31,6 +31,25 @@ body::before {
     overflow: hidden;
 }
 
+aside#popNotice {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: .75rem 1rem;
+    border-top-left-radius: 1.5vh;
+    border-top-right-radius: 1.5vh;
+    background: #000;
+    font-size: 1.5vh;
+    text-align: center;
+    line-height: 1.6;
+}
+
+aside#popNotice span {
+    color: rgba(255, 210, 21, 1);
+}
+
 /* ---------- 영역 공통 선언 종료 ---------- */
 /* ---------- 헤더 영역 시작 ---------- */
 
@@ -43,6 +62,7 @@ header#headBase {
     left: 1rem;
     right: 1rem;
     z-index: 500000;
+    pointer-events: none;
 }
 
 h1#logo {
@@ -52,6 +72,7 @@ h1#logo {
     height: 2.5rem;
     filter: drop-shadow(0 .25rem .5rem rgba(0, 0, 0, .2));
     animation: fizzle 2s infinite;
+    pointer-events: all;
 }
 
 h1#logo:hover::before {
@@ -77,6 +98,7 @@ nav#navBase {
     box-shadow: 0 .5rem .5rem -.25rem rgba(0, 0, 0, .2);
     font-size: 1vh;
     transition: .3s;
+    pointer-events: all;
 }
 
 nav#navBase > a {
@@ -484,10 +506,17 @@ article#portDesc > * {
     line-height: 1.8;
 }
 
+.btnPort_container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: .5rem;
+    margin-top: 1.5rem;
+}
+
 a.btnPort {
     display: block;
-    margin-top: 1.5rem;
-    padding: .5rem .75rem;
+    padding: .5rem 1.5rem;
     border-radius: .15rem;
     background: rgba(255, 210, 21, 1);
     color: rgba(0, 0, 0, .75);
@@ -495,7 +524,9 @@ a.btnPort {
 }
 
 a.btnPort:hover {
-    background: rgba(25, 214, 120, 1);
+    background: rgba(25, 214, 120, 1) url('../images/icons/icon_extlink.png') no-repeat right center;
+    background-size: contain;
+    background-blend-mode: hard-light;
     color: #fff;
     font-weight: bolder;
 }
