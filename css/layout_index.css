@@ -547,7 +547,7 @@ dd.port_desc_tool {
 
 a.btnPort {
     display: block;
-    padding: .5rem 1.5rem;
+    padding: .5rem 1rem;
     border-radius: .15rem;
     background: rgba(255, 210, 21, 1);
     color: rgba(0, 0, 0, .75);
