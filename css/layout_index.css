@@ -518,6 +518,8 @@ article#portDesc > * {
 .port_dl {
     display: flex;
     flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
     gap: 1.5rem;
     height: 100%;
     overflow-y: auto;
