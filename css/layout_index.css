@@ -35,13 +35,13 @@ aside#popNotice {
     display: none;
     position: fixed;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: .5rem;
+    right: .5rem;
     padding: .75rem 1rem;
     border-top-left-radius: 1.5vh;
     border-top-right-radius: 1.5vh;
     background: #000;
-    font-size: 1.5vh;
+    font-size: 1.3vh;
     text-align: center;
     line-height: 1.6;
     z-index: 500000;
