@@ -41,7 +41,7 @@ aside#popNotice {
     box-sizing: border-box;
     border-top-left-radius: 1.75vh;
     background: #000;
-    font-size: .6rem;
+    font-size: .6vw;
     text-align: right;
     line-height: 1.6;
     z-index: 500000;
