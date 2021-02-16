@@ -431,7 +431,7 @@ section#secContact {
     aspect-ratio: 16 / 9;
     width: 100%;
     border-bottom: .05rem solid rgba(255, 255, 255, .3);
-    object-position: center top;
+    object-position: center;
     object-fit: cover;
     filter: grayscale(.75) brightness(.6);
     transition: .3s;
@@ -543,6 +543,13 @@ dd.port_desc_tool {
     line-height: 1.8;
 }
 
+.port_desc_spec > img {
+    width: 100%;
+    height: auto;
+    border-radius: 1.5vw;
+    object-fit: cover;
+}
+
 .btnPort_container {
     display: flex;
     flex-flow: row nowrap;
@@ -553,10 +560,12 @@ dd.port_desc_tool {
 
 a.btnPort {
     display: block;
-    padding: .5rem;
+    padding: .5rem 1.5rem;
     border-radius: .15rem;
     background: rgba(255, 210, 21, 1);
     color: rgba(0, 0, 0, .75);
+    font-weight: bolder;
+    text-shadow: none;
     transition: .5s;
 }
 
@@ -566,6 +575,7 @@ a.btnPort:hover {
     background-blend-mode: hard-light;
     color: #fff;
     font-weight: bolder;
+    text-shadow: inherit;
 }
 
 /* ---------- secPortfolio 종료 ---------- */

@@ -38,7 +38,7 @@ $(document).ready(function() { // jQuery Load
             $('article#portDesc').fadeIn();
             $('.port_dl > dt').text($(this).find('span.txtbold').text());
             $('.port_dl > dd.port_desc_tool').text($(this).find('span.port_tool').text());
-            $('.port_dl img').attr('src', $(this).find('img').attr('src'));
+            $('.port_dl img').attr('src', $(this).find('img').attr('full-src'));
             $('.port_dl .port_desc_spec').html($(this).find('div.port_description').html());
         });
     });
