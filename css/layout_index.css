@@ -209,8 +209,12 @@ section#secContact {
 /* ---------- 섹션 공통 선언 종료 ---------- */
 /* ---------- secHero 시작 ---------- */
 
-.hero_title {
-    margin-top: 0;
+svg.hero_title text {
+    font-size: 4vw;
+}
+
+svg.hero_title text:nth-child(2) {
+    transform-origin: center;
     animation: pulse .5s infinite;
 }
 
